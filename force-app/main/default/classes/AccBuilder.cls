@@ -1,12 +1,13 @@
 public with sharing class AccBuilder implements IAccountBuilder {
-            public Account acc {get; private set;}
+            private Account acc;
 
             public AccBuilder() {
                 this.acc = new Account();
             }
 
-            public void setName(String name) {
+            public IAccountBuilder setName(String name) {
                 acc.Name = name;
+                return this;
             }
 
             public Account build() {

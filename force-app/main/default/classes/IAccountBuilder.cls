@@ -1,4 +1,4 @@
 public interface IAccountBuilder {
-    void setName(String name);
+    IAccountBuilder setName(String name);
     Sobject build();
 }
